@@ -19,7 +19,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: auto;
-		-ms-behavior: url("static/js/ie/backgroundsize.min.htc");
+		-ms-behavior: url("/js/ie/backgroundsize.min.htc");
 	}
 
 		#banner .inner {
@@ -33,5 +33,5 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: auto;
-		-ms-behavior: url("static/js/ie/backgroundsize.min.htc");
+		-ms-behavior: url("/js/ie/backgroundsize.min.htc");
 	}
