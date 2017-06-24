@@ -4,6 +4,15 @@ baseURL = "http://example.org/"
 theme = "../../../twenty"
 
 [params]
+  copyright = "John Doe"
   subtitle = "by HTML5 UP"
   description = "This is **Twenty**, a free\n\nresponsive template\n\nby [HTML5 UP](https://html5up.net)."
   tellMeMoreButton = "Tell Me More"
+
+[params.social]
+  twitter = "https://twitter.com"
+  facebook = "https://facebook.com"
+  google-plus = "https://googleplus.com"
+  github = "https://github.com"
+  dribbble = "https://dribbble.com"
+
