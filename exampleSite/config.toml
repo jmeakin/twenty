@@ -1,0 +1,9 @@
+languageCode = "en-us"
+title = "Twenty"
+baseURL = "http://example.org/"
+theme = "../../../twenty"
+
+[params]
+  subtitle = "by HTML5 UP"
+  description = "This is **Twenty**, a free\n\nresponsive template\n\nby [HTML5 UP](https://html5up.net)."
+  tellMeMoreButton = "Tell Me More"
