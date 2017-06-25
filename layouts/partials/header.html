@@ -19,29 +19,24 @@
 		<div id="page-wrapper">
 			<!-- Header -->
 			<header id="header" class="{{ if not (isset .Params "class") }}alt{{ end }}">
-					<h1 id="logo"><a href="index.html">{{ .Site.Title }} <span>{{ .Site.Params.subtitle }}</span></a></h1>
-					<nav id="nav">
-						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
-							<li class="submenu">
-								<a href="#">Sections</a>
+				<h1 id="logo"><a href="index.html">{{ .Site.Title }} <span>{{ .Site.Params.subtitle }}</span></a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="index.html">Welcome</a></li>
+						<li class="submenu">
+							<a href="#">Sections</a>
 
-								<ul>
-								{{ range .Site.Pages.GroupBy "Section" }}
-								<li class="submenu">	
-									<a href="{{ .Key }}">{{ .Key }}</a>
-									<ul>
-										{{ range .Pages }}
-										<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-										{{ end }}
-									</ul>
+							<ul>
+								{{ range where .Site.Pages ".IsNode" true }}
+								<li>
+									<a href="{{ .Permalink }}">{{ .Title }}</a>
 								</li>
 								{{ end }}
-								</ul>
+							</ul>
 
-							</li>
-							<li><a href="#" class="button special">Sign Up</a></li>
-						</ul>
-					</nav>
-				</header>
-	
+						</li>
+						<li><a href="#" class="button special">Sign Up</a></li>
+					</ul>
+				</nav>
+			</header>
+

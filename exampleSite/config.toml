@@ -2,6 +2,7 @@ languageCode = "en-us"
 title = "Twenty"
 baseURL = "http://localhost:1313/"
 theme = "../../../twenty"
+menu = "main"
 
 [params]
   copyright = "John Doe"
