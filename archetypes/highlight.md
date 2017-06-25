@@ -1,4 +1,6 @@
 +++
-image_url = ""
+imageURL = ""
+class = "no-sidebar"
+icon = ""
 +++
 

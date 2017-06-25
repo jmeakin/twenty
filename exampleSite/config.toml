@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Twenty"
-baseURL = "http://example.org/"
+baseURL = "http://localhost:1313/"
 theme = "../../../twenty"
 
 [params]

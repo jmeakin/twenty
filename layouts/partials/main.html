@@ -96,11 +96,11 @@
 			{{ if eq .Type "highlight" }}
 			<div class="6u 12u(narrower)">
 				<section>
-					<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.image_url }}" alt="{{ .Title }}" /></a>
+					<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
 					<header>
 						<h3>{{ .Title }}</h3>
 					</header>
-					{{ .Content }}
+					{{ .Summary }}
 				</section>
 
 			</div>
