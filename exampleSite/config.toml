@@ -9,7 +9,7 @@ menu = "main"
   subtitle = "by HTML5 UP"
   description = "This is **Twenty**, a free\n\nresponsive template\n\nby [HTML5 UP](https://html5up.net)."
   tellMeMoreButton = "Tell Me More"
-  cleanLook = false
+  cleanLook = true
 
 [params.social]
   twitter = "https://twitter.com"
