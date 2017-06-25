@@ -1,5 +1,5 @@
 <!-- Main -->
-<article id="main">
+<article id="main" {{ if .Site.Params.cleanLook }}style='background-image: url(), url(), url(), url();' {{ end }}>
 
 	<header class="special container">
 		<span class="icon fa-bar-chart-o"></span>
@@ -15,7 +15,7 @@
 	</header>
 
 	<!-- One -->
-	<section class="wrapper style2 container special-alt">
+	<section class="wrapper style2 container special-alt" {{ if .Site.Params.cleanLook }}style='background-image: url(), url();' {{ end }}>
 		<div class="row 50%">
 			<div class="8u 12u(narrower)">
 

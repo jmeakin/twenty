@@ -1,5 +1,5 @@
 <!-- Banner -->
-<section id="banner">
+<section id="banner" {{ if .Site.Params.cleanLook }}style='background-image: url(), url(), url("css/images/overlay.png"), url("../../images/banner.jpg");'{{ end }}>
 
 	<!--
 	 ".inner" is set up as an inline-block so it automatically expands

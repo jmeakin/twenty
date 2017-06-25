@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <!-- Main -->
-<article id="main">
+<article id="main" {{ if .Site.Params.cleanLook }}style='background-image: url(), url(), url(), url();'{{ end }}>
 
 	<header class="special container">
 		<span class="icon fa-{{ .Params.icon }}"></span>
