@@ -1,0 +1,19 @@
+<nav id="nav">
+	<ul>
+		<li class="current"><a href="index.html">Welcome</a></li>
+		<li class="submenu">
+			<a href="#">Sections</a>
+
+			<ul>
+				{{ range where .Site.Pages ".IsNode" true }}
+				<li>
+					<a href="{{ .Permalink }}">{{ .Title }}</a>
+				</li>
+				{{ end }}
+			</ul>
+
+		</li>
+		<li><a href="#" class="button special">Sign Up</a></li>
+	</ul>
+</nav>
+

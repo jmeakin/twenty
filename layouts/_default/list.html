@@ -5,72 +5,46 @@
 	<header class="special container">
 		<span class="icon fa-{{ .Params.icon }}"></span>
 		<h2>{{ .Title }}</h2>
-		{{ .Summary }}
 	</header>
 
 	<!-- One -->
 	<section class="wrapper style4 container">
 
-		<!-- Content -->
-		<div class="content">
-			<section>
-				<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
-				{{ .Content }}
-			</section>
+		{{ if eq .Params.class "right-sidebar"}}
+		<div class="row 150%">
+			<div class="8u 12u(narrower)">
+				{{ else if eq .Params.class "left-sidebar" }}
+				<div class="row 150%">
+					{{ partial "section-list.html" . }}
+					<div class="8u 12u(narrower) important(narrower)">
+						{{ end }} 
+						<!-- Content -->
+						<div class="content">
+							<section>
+								<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
+								{{ .Content }}
+							</section>
+						</div>
+						{{ if eq .Params.class "right-sidebar"}}
+					</div>
+					{{ partial "section-list.html" . }}
+				</div>
+				{{ else if eq .Params.class "left-sidebar" }}
+			</div>
 		</div>
+		{{ end }} 
+
 
 	</section>
 
+	{{ if eq .Params.class "no-sidebar" }}
 	<!-- Two -->
 	<section class="wrapper style1 container special">
 		<div class="row">
-			<div class="4u 12u(narrower)">
-
-				<section>
-					<header>
-						<h3>This is Something</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button small">Learn More</a></li>
-						</ul>
-					</footer>
-				</section>
-
-			</div>
-			<div class="4u 12u(narrower)">
-
-				<section>
-					<header>
-						<h3>Also Something</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button small">Learn More</a></li>
-						</ul>
-					</footer>
-				</section>
-
-			</div>
-			<div class="4u 12u(narrower)">
-
-				<section>
-					<header>
-						<h3>Probably Something</h3>
-					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
-					<footer>
-						<ul class="buttons">
-							<li><a href="#" class="button small">Learn More</a></li>
-						</ul>
-					</footer>
-				</section>
-
-			</div>
+			{{ partial "section-list.html" . }}
 		</div>
 	</section>
+	{{ end }}
 
 </article>
 

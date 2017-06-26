@@ -1,0 +1,38 @@
+{{ $sidebar := .Params.class }}
+
+{{ if ne $sidebar "no-sidebar"}}
+<div class="4u 12u(narrower)">
+	<div class="sidebar">
+		{{ end }}
+
+		{{ range (where .Data.Pages "Section" "highlight").ByDate }}
+		{{ if eq $sidebar "no-sidebar"}}
+		<div class="4u 12u(narrower)">
+			{{ end }}
+			<section>
+				<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
+				<header>
+					<h3>{{ .Title }}</h3>
+				</header>
+				{{ .Summary }}
+				{{ if .Truncated}}
+				<footer>
+					<ul class="buttons">
+						<li><a href="{{ .Permalink }}" class="button small">Read More</a></li>
+					</ul>
+				</footer>
+				{{ end }}
+
+			</section>
+			{{ if eq $sidebar "no-sidebar"}}
+		</div>
+		{{ end }}
+		{{ end }}
+
+		{{ if ne $sidebar "no-sidebar"}}
+	</div>
+</div>
+{{ end }}
+
+
+
