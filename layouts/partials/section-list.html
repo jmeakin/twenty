@@ -5,7 +5,7 @@
 	<div class="sidebar">
 		{{ end }}
 
-		{{ range (where .Data.Pages "Section" "highlight").ByDate }}
+		{{ range .Data.Pages.ByDate }}
 		{{ if eq $sidebar "no-sidebar"}}
 		<div class="4u 12u(narrower)">
 			{{ end }}
