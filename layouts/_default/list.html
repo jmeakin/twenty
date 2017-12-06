@@ -21,7 +21,9 @@
 						<!-- Content -->
 						<div class="content">
 							<section>
+								{{ if not .Params.hideImage }}
 								<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
+{{end}}
 								{{ .Content }}
 							</section>
 						</div>
