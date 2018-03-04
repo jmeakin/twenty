@@ -21,10 +21,18 @@
 						<!-- Content -->
 						<div class="content">
 							<section>
-								{{ if not .Params.hideImage }}
+i				<div class="row">
+                                <div class="3u 0u(narrower)"></div>
+                                <div class="6u 12u(narrower)">
+{{ if not .Params.hideImage }}
 								<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
 {{end}}
-								{{ .Content }}
+
+                                </div>
+                                <div class="3u 0u(narrower)"></div>
+                                </div>
+
+																{{ .Content }}
 							</section>
 						</div>
 						{{ if eq .Params.class "right-sidebar"}}
