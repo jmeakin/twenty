@@ -13,7 +13,13 @@
 		<!-- Content -->
 		<div class="content">
 			<section>
-				<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
+				<div class="row">
+				<div class="3u 0u(narrower)"></div>
+				<div class="6u 12u(narrower)">
+					<a href="{{ .Permalink }}" class="image featured"><img src="{{ .Params.imageURL }}" alt="{{ .Title }}" /></a>
+				</div>
+				<div class="3u 0u(narrower)"></div>
+				</div>
 				{{ .Content }}
 			</section>
 		</div>
