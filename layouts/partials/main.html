@@ -5,7 +5,11 @@
 	<section class="wrapper style3 container special">
 
 		<header class="major">
-			<h2>Sections</h2>
+			{{ if not (isset .Site.Params "blurb") }}
+			        <h2>Sections</h2>
+			{{ else }}
+			        <p>{{ .Site.Params.blurb }}</p>
+			{{ end }}
 		</header>
 		
 		<div class="row">
